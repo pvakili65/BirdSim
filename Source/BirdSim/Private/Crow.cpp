@@ -161,6 +161,7 @@ void ACrow::JumpStarted()
 				CameraBoom->bInheritRoll = false;
 				CameraBoom->SocketOffset = FlightAimCameraOffset;
 				CameraBoom->TargetArmLength = FlightAimCameraDistance;
+				CurrentRecoil = FRotator(0.f, 0.f, 13.f);
 
 			}
 
@@ -180,6 +181,10 @@ void ACrow::JumpStarted()
 			CameraBoom->bInheritRoll = true;
 			CameraBoom->SocketOffset = FVector(0.f, 0.f, 0.f);
 			CameraBoom->SetRelativeRotation(FRotator(0.f, 0.f, 0.f));
+
+			if (bGunEquipped) {
+				CurrentRecoil = FRotator(0.f, 0.f, -17.f);
+			}
 
 			UpdateCrosshairVisibility();
 		}
