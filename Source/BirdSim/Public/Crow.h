@@ -172,7 +172,7 @@ private:
 
 	float LastWPressedTime;
 	float LastSpacePressedTime;
-	float DoubleTapWindow = 0.3;
+	float DoubleTapWindow = 0.37;
 	float HeightWhenLandingStarted;
 	bool IsRunning;
 	bool IsFlying;
